@@ -12,13 +12,13 @@ else
     if [ "$(uname)" == "Darwin" ]; then
         # Mac OS X
         if ! brew list jq &> /dev/null; then
-            echo "Installing jq using Homebrew..."
+            echo "Attempting to install jq using Homebrew..."
             brew install jq
         fi
         elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         # Linux
         if ! apt-cache show jq &> /dev/null; then
-            echo "Installing jq using apt-get..."
+            echo "Attempting to install jq using apt-get..."
             sudo apt-get update
             sudo apt-get install jq
         fi
@@ -36,13 +36,13 @@ else
     if [ "$(uname)" == "Darwin" ]; then
         # Mac OS X
         if ! brew list curl &> /dev/null; then
-            echo "Installing curl using Homebrew..."
+            echo "Attempting to install curl using Homebrew..."
             brew install curl
         fi
         elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         # Linux
         if ! apt-cache show curl &> /dev/null; then
-            echo "Installing curl using apt-get..."
+            echo "Attempting to install curl using apt-get..."
             sudo apt-get update
             sudo apt-get install curl
         fi
