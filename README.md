@@ -65,4 +65,5 @@ On successful execution, the script will return a JSON object containing the rep
 ## TODO
 
 - Allow username to be optional by saving as an environment variable.
+- Allow user to set `private` property.
 - Modularize it so that it can be plugged into other CLI commands on demand.
